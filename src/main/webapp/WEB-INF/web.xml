@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="https://jakarta.ee/xml/ns/jakartaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-app_5_0.xsd"
+         version="5.0">
+    <display-name>Employee CRUD API</display-name>
+    <context-param>
+        <param-name>appSetting</param-name>
+        <param-value>EnterpriseAppGlobalValue</param-value>
+    </context-param>
+    <servlet>
+        <servlet-name>EmployeeServlet</servlet-name>
+        <servlet-class>com.example.servlet.EmployeeServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>EmployeeServlet</servlet-name>
+        <url-pattern>/employees/*</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>EmployeeHttpServlet</servlet-name>
+        <servlet-class>com.example.servlet.EmployeeHttpServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>EmployeeHttpServlet</servlet-name>
+        <url-pattern>/employees-html/*</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>EmployeeJspServlet</servlet-name>
+        <servlet-class>com.example.servlet.EmployeeJspServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>EmployeeJspServlet</servlet-name>
+        <url-pattern>/employees-jsp/*</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>SessionCookieDemoServlet</servlet-name>
+        <servlet-class>com.example.servlet.SessionCookieDemoServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>SessionCookieDemoServlet</servlet-name>
+        <url-pattern>/session-cookie-demo/*</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>ConfigDemoServlet</servlet-name>
+        <servlet-class>com.example.servlet.ConfigDemoServlet</servlet-class>
+        <init-param>
+            <param-name>servletSetting</param-name>
+            <param-value>ServletSpecificValue</param-value>
+        </init-param>
+        <load-on-startup>1</load-on-startup>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ConfigDemoServlet</servlet-name>
+        <url-pattern>/config-demo</url-pattern>
+    </servlet-mapping>
+
+</web-app> 
