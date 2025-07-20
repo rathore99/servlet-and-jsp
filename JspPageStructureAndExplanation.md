@@ -154,5 +154,3 @@ A typical JSP page consists of:
 - **User Experience:**  Dynamic content and feedback based on user state.
 
 ---
-
-**If you want a breakdown of another JSP file or want to see more advanced features (like custom tags, error handling, or internationalization), just ask!** 
